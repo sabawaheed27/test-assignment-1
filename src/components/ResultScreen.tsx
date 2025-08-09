@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from '../styles/ResultScreen.module.scss';
 
 export default function ResultScreen({ score, total, onPlayAgain }: { score: number; total: number; onPlayAgain: () => void }) {

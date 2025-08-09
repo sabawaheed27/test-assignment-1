@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { Question } from "../App";
 import styles from '../styles/QuestionCard.module.scss';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styles/ScoreBoard.module.scss';
 
 export default function ScoreBoard({ score, answered, total }: { score: number; answered: number; total: number }) {

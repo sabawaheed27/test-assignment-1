@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import LandingScreen from './components/LandingScreen';
 import QuestionCard from './components/QuestionCard';
 import ScoreBoard from './components/ScoreBoard';

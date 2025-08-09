@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styles/LandingScreen.module.scss';
 
 export default function LandingScreen({ onStart }: { onStart: () => void }) {
