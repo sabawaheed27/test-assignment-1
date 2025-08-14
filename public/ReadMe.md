@@ -20,7 +20,7 @@ As a user, when I click Play Again, the app resets to the Landing screen with al
 ## Features & Behavior (Acceptance Criteria)
 ### LandingScreen
 
-![Landing page](image.png)
+![Landing page](./screenshots/image.png)
 
 - Renders an h2 heading “Welcome to QuickQuiz”
 
@@ -35,17 +35,17 @@ As a user, when I click Play Again, the app resets to the Landing screen with al
 - Label text reflects current theme:
 
   - theme="light" → shows text “Switch to dark”
-  ![theme=light](image-1.png)
+  ![theme=light](./screenshots/image-1.png)
 
   - theme="dark" → shows text “Switch to light”
-  ![theme=dark](image-2.png)
+  ![theme=dark](./screenshots/image-2.png)
 
 - Clicking the button triggers onToggle and updates the document root attribute data-theme to "light" or "dark"
 
 - Theme persists when navigating between screens
 
 ### QuestionCard
-![Question card](image-3.png)
+![Question card](./screenshots/image-3.png)
 
 - Displays the question in an h2
 
@@ -61,22 +61,22 @@ As a user, when I click Play Again, the app resets to the Landing screen with al
 - type="submit", aria-label="submit-answer"
 
 - Disabled until a radio option is selected
-![submit button-disabled](image-9.png)
+![submit button-disabled](./screenshots/image-9.png)
 
 - On submit, calls onSubmit(selectedIndex)
-![Submit button](image-8.png)
+![Submit button](./screenshots/image-8.png)
 
 - When the question prop changes, the current selection resets to none
 
 ### ScoreBoard
-![Score board](image-7.png)
+![Score board](./screenshots/image-7.png)
 
 - Renders a live region (role="status" with aria-live="polite")
 
 - Displays Score: {score} and Answered: {answered}/{total}
 
 ### ResultScreen
-![Result screen](image-6.png)
+![Result screen](./screenshots/image-6.png)
 
 - Shows h2 heading “Quiz complete!”
 
