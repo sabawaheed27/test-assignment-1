@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Question } from "../App";
 import styles from '../styles/QuestionCard.module.scss';
 
 export default function QuestionCard({ question, onSubmit }: { question: Question; onSubmit: (i: number) => void }) {
   const [selected, setSelected] = useState<number | null>(null);
+  useEffect(() => {
+    setSelected(null);  // reset selection whenever the question changes
+  }, [question]);
+
 
   return (
     <article className={styles.card}>
