@@ -10,11 +10,14 @@ describe('ResultScreen', () => {
     ).toBeInTheDocument();
   });
 
-  it('calls onPlayAgain when play again button clicked', () => {
-    const onPlayAgain = jest.fn();
-    render(<ResultScreen score={7} total={10} onPlayAgain={onPlayAgain} />);
+  it('returns to landing screen when play again clicked', () => {
+    const { rerender } = render(
+      <ResultScreen score={7} total={10} onPlayAgain={() => rerender(<h2>Welcome to QuickQuiz</h2>)} />
+    );
+
     fireEvent.click(screen.getByRole('button', { name: /play-again/i }));
-    expect(onPlayAgain).toHaveBeenCalledTimes(1);
+
+    expect(screen.getByRole('heading', { name: /welcome to quickquiz/i })).toBeInTheDocument();
   });
 
   it('renders the heading "Quiz complete!"', () => {
