@@ -13,11 +13,13 @@ describe('ThemeToggle', () => {
     expect(screen.getByRole('button', { name: /toggle-theme/i })).toHaveTextContent('Switch to light');
   });
 
-  it('calls onToggle when clicked', () => {
-    const onToggle = jest.fn();
-    render(<ThemeToggle theme="light" onToggle={onToggle} />);
-    fireEvent.click(screen.getByRole('button', { name: /toggle-theme/i }));
-    expect(onToggle).toHaveBeenCalledTimes(1);
+  it('changes label after clicking', () => {
+    const { rerender } = render(<ThemeToggle theme="light" onToggle={() => rerender(<ThemeToggle theme="dark" onToggle={() => {}} />)} />);
+    
+    const button = screen.getByRole('button', { name: /toggle-theme/i });
+    fireEvent.click(button);
+
+    expect(button).toHaveTextContent('Switch to light');
   });
 
   it('has the correct aria-label attribute', () => {
