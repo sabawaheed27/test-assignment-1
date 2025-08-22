@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import LandingScreen from "./components/LandingScreen";
+import ScoreBoard from "./components/ScoreBoard";
 
 const App: React.FC = () => {
   const [quizStarted, setQuizStarted] = useState(false);
+    const [answered, setAnswered] = useState(0);
+  
 
   const handleStart = () => setQuizStarted(true);
 
