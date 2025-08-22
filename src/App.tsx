@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import LandingScreen from "./components/LandingScreen";
+import ThemeToggle from "./components/ThemeToggle";
+
 
 const App: React.FC = () => {
   const [quizStarted, setQuizStarted] = useState(false);
